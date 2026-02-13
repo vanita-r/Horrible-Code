@@ -2,6 +2,7 @@
 # 3 coding principles NOT being used: KISS, Single Responsibility, and Clean Code
 
 class BadCalculator:
+    # This method does everything, which violates the Single Responsibility Principle
     def horrible():
         print("Welcome to the Bad Calculator!")
         print("Choose an operation:")
@@ -14,6 +15,8 @@ class BadCalculator:
         a = float(input("First number: "))
         b = float(input("Second number: "))
 
+        # This method is not clean and is hard to read, which violates the Clean Code principle
+        # It's also not simple and uses recursion for something simple, which violates the KISS principle
         def mult_thingy(a, b):
             if b == 0:
                 return 0
@@ -21,7 +24,7 @@ class BadCalculator:
                 return a + mult_thingy(a, b - 1)
             return -mult_thingy(a, -b)
             
-        
+        # This part of the code is also not clean and is hard to read, which violates the Clean Code principle
         if choice == "1":
             print(f"{a} + {b} = {a + b}")
         elif choice == "2":
