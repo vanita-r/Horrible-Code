@@ -22,4 +22,16 @@ class BadCalculator:
             return -mult_thingy(a, -b)
             
         
-        
+        if choice == "1":
+            print(f"{a} + {b} = {a + b}")
+        elif choice == "2":
+            print(f"{a} - {b} = {a - b}")
+        elif choice == "3":
+            print(f"{a} * {b} = {mult_thingy(a, b)}")
+        elif choice == "4":
+                print(f"{a} / {b} = {a / b}")
+        else:
+            print("Invalid choice!")
+
+bad_calculator = BadCalculator()
+bad_calculator.horrible()
