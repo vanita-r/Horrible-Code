@@ -29,7 +29,19 @@ class BasicCalculator:
         num1 = float(input("Enter first number: "))
         num2 = float(input("Enter second number: "))
 
-
+        self.display_result(num1, num2, choice)
+        
+    def display_result(self, num1, num2, choice):
+        if choice == "1":
+            print(f"{num1} + {num2} = {self.addition(num1, num2)}")
+        elif choice == "2":
+            print(f"{num1} - {num2} = {self.subtraction(num1, num2)}")
+        elif choice == "3":
+            print(f"{num1} * {num2} = {self.multiplication(num1, num2)}")
+        elif choice == "4":
+            print(f"{num1} / {num2} = {self.division(num1, num2)}")
+        else:
+            print("Invalid input. Please select a valid operation.")
 
 
 calculator = BasicCalculator()
