@@ -3,6 +3,8 @@
 
 class BasicCalculator:
     # calculations
+    # These methods handle individual operations, following the Single Responsibility Principle and KISS Principle
+    # They also use clear and descriptive names, following the Clean Code principle
     def addition(self, addend1, addend2):
         return addend1 + addend2
     
@@ -18,6 +20,9 @@ class BasicCalculator:
         return dividend / divisor
     
     # user interface
+    # This method handles user interaction, which follows the Single Responsibility Principle
+    # It is also simple and straightforward, following the KISS Principle
+    # The code is clean and easy to read, following the Clean Code principle
     def user_interface(self):
         print("Please select an operation:")
         print("1. Addition")
@@ -30,7 +35,10 @@ class BasicCalculator:
         num2 = float(input("Enter second number: "))
 
         self.display_result(num1, num2, choice)
-        
+    
+    # display results
+    # This method is responsible for displaying results, following the Single Responsibility Principle and KISS Principle
+    # It also uses clear and descriptive names, following the Clean Code principle
     def display_result(self, num1, num2, choice):
         if choice == "1":
             print(f"{num1} + {num2} = {self.addition(num1, num2)}")
@@ -43,6 +51,6 @@ class BasicCalculator:
         else:
             print("Invalid input. Please select a valid operation.")
 
-
+# Running the calculator
 calculator = BasicCalculator()
 calculator.user_interface()
